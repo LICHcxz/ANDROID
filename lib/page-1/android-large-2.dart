@@ -3,12 +3,23 @@ import 'package:flutter/gestures.dart';
 import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:myapp/utils.dart';
-
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'android-large-1.dart';
 import 'android-large-3.dart';
 import 'android-large-4.dart';
 
 class Scene2 extends StatelessWidget {
+
+  void initFirebase() async {
+	  WidgetsFlutterBinding.ensureInitialized();
+	  await Firebase.initializeApp();
+    final ref = FirebaseStorage.instance.ref().child('1.jpg');
+    // no need of the file extension, the name will do fine.
+    var url = await ref.getDownloadURL();
+  }
+
   @override
   Widget build(BuildContext context) {
     double baseWidth = 360;
@@ -333,8 +344,8 @@ class Scene2 extends StatelessWidget {
                         margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 94*fem),
                         width: 197*fem,
                         height: 191*fem,
-                        child: Image.asset(
-                          'assets/page-1/images/ellipse-1.png',
+                        child: Image.network(
+                          'url',
                           width: 197*fem,
                           height: 191*fem,
                         ),
