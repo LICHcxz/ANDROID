@@ -3,7 +3,8 @@ import 'package:flutter/gestures.dart';
 import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:myapp/utils.dart';
-
+import 'package:flutter_map/flutter_map.dart';
+import 'package:latlong2/latlong.dart';
 import 'android-large-2.dart';
 
 class Scene3 extends StatelessWidget {
@@ -68,63 +69,6 @@ class Scene3 extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Container(
-                              // group3vQD (115:53)
-                              margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 62*fem, 0*fem),
-                              child: TextButton(
-                                onPressed: () {},
-                                style: TextButton.styleFrom (
-                                  padding: EdgeInsets.zero,
-                                ),
-                                child: Container(
-                                  width: 76*fem,
-                                  height: double.infinity,
-                                  child: Stack(
-                                    children: [
-                                      Positioned(
-                                        // rectangle7ku3 (I115:53;115:12)
-                                        left: 7*fem,
-                                        top: 0*fem,
-                                        child: Align(
-                                          child: SizedBox(
-                                            width: 62*fem,
-                                            height: 30*fem,
-                                            child: Container(
-                                              decoration: BoxDecoration (
-                                                borderRadius: BorderRadius.circular(18*fem),
-                                                color: Color(0xffd9d9d9),
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                      Positioned(
-                                        // backQTo (I115:53;115:8)
-                                        left: 17*fem,
-                                        top: 3*fem,
-                                        child: Align(
-                                          child: SizedBox(
-                                            width: 42*fem,
-                                            height: 24*fem,
-                                            child: Text(
-                                              'BACK',
-                                              textAlign: TextAlign.center,
-                                              style: SafeGoogleFont (
-                                                'Rakkas',
-                                                fontSize: 16*ffem,
-                                                fontWeight: FontWeight.w400,
-                                                height: 1.49*ffem/fem,
-                                                color: Color(0xff000000),
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Container(
                               // group4q3K (115:70)
                               margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 57*fem, 2*fem),
                               child: TextButton(
@@ -181,63 +125,6 @@ class Scene3 extends StatelessWidget {
                                 ),
                               ),
                             ),
-                            Container(
-                              // group5iNy (115:71)
-                              margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 2*fem),
-                              child: TextButton(
-                                onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => Scene3()));},
-                                style: TextButton.styleFrom (
-                                  padding: EdgeInsets.zero,
-                                ),
-                                child: Container(
-                                  width: 72*fem,
-                                  height: 30*fem,
-                                  child: Stack(
-                                    children: [
-                                      Positioned(
-                                        // rectangle9aRB (115:48)
-                                        left: 5*fem,
-                                        top: 0*fem,
-                                        child: Align(
-                                          child: SizedBox(
-                                            width: 62*fem,
-                                            height: 30*fem,
-                                            child: Container(
-                                              decoration: BoxDecoration (
-                                                borderRadius: BorderRadius.circular(18*fem),
-                                                color: Color(0xffd9d9d9),
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                      Positioned(
-                                        // map4r9 (115:49)
-                                        left: 18.5*fem,
-                                        top: 5*fem,
-                                        child: Align(
-                                          child: SizedBox(
-                                            width: 35*fem,
-                                            height: 24*fem,
-                                            child: Text(
-                                              'MAP',
-                                              textAlign: TextAlign.center,
-                                              style: SafeGoogleFont (
-                                                'Rakkas',
-                                                fontSize: 16*ffem,
-                                                fontWeight: FontWeight.w400,
-                                                height: 1.49*ffem/fem,
-                                                color: Color(0xff000000),
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            ),
                           ],
                         ),
                       ),
@@ -249,7 +136,7 @@ class Scene3 extends StatelessWidget {
             Positioned(
               // ZhP (92178749)
               left: 24*fem,
-              top: 31*fem,
+              top: 100*fem,
               child: Container(
                 width: 314*fem,
                 height: 674*fem,
@@ -257,27 +144,51 @@ class Scene3 extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Container(
-                      // ellipse1EYd (11:133)
-                      margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 1*fem, 7*fem),
-                      width: 95*fem,
-                      height: 92*fem,
-                      child: Image.asset(
-                        'assets/page-1/images/ellipse-1.png',
-                        width: 95*fem,
-                        height: 92*fem,
-                      ),
-                    ),
-                    Container(
                       // rectangle3WFF (11:132)
                       width: 314*fem,
                       height: 575*fem,
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(50*fem),
-                        child: Image.asset(
-                          'assets/page-1/images/rectangle-3.png',
-                          fit: BoxFit.contain,
-                        ),
+                      child: Stack(children: <Widget>[
+                        FlutterMap(
+                          options: MapOptions(
+                            center: LatLng(56.0534, 92.9111),
+                            zoom: 16.0,
+                          ),
+                          children: [
+                            TileLayer(
+                              urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+                              userAgentPackageName: 'com.example.app',
+                            ),
+                            MarkerLayer(
+                              markers: [
+                                Marker(
+                                  point: LatLng(56.0534, 92.9111),
+                                  builder: (ctx) => const Icon(
+                                    Icons.location_on,
+                                    color: Colors.blue,
+                                  )
+                                )
+                              ],
+                            )
+                          ],
+                          // nonRotatedChildren: [
+                          //   RichAttributionWidget(
+                          //     attributions: [
+                          //       TextSourceAttribution(
+                          //         'OpenStreetMap contributors',
+                          //         onTap: () => launchUrl(Uri.parse('https://openstreetmap.org/copyright')),
+                          //       ),
+                          //     ],
+                          //   ),
+                          // ],
+                        )
+                      ]
                       ),
+                      //borderRadius: BorderRadius.circular(50*fem),
+                        //child: Image.asset(
+                          //'assets/page-1/images/rectangle-3.png',
+                          //fit: BoxFit.contain,
+                        //),
+                      //),
                     ),
                   ],
                 ),
@@ -341,4 +252,6 @@ class Scene3 extends StatelessWidget {
       ),
           );
   }
+  
+  launchUrl(Uri parse) {}
 }
