@@ -8,7 +8,7 @@
 ### Страницы приложения
 При запуске пользователя встречает карточка приложения, которая рассказывает о главной идеи приложениея и предлагает сгенерировать подарок.
 
-<img src="screens/MAIN.png" width=30% alt="signUp"> <img src="screens/signIn.png" width=30% alt="signIn">
+<img src="screens/MAIN.png" width=30% alt="signUp">
 
 После нажатия "choose a gift" пользователя перенаправляет на страницу с предложенным подрком.
 
@@ -21,4 +21,4 @@
 
 При нажатии на "fact about cat" пользователя перебрасывает на страницу с интересными рандомными фактами о котах. Вернутся пользователь может нажав стрелочку слева сверху.
 
-<img src="screens/FACTaboutCAT.png" width=30% alt="map"> <img src="screens/newcity.png" width=30% alt="newcity">
+<img src="screens/FACTaboutCAT.png" width=30% alt="map"> 
