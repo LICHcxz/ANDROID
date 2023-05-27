@@ -17,7 +17,7 @@ class Scene2 extends StatelessWidget {
   void initFirebase() async {
 	  WidgetsFlutterBinding.ensureInitialized();
 	  await Firebase.initializeApp();
-    final ref = FirebaseStorage.instance.ref().child('${Random().nextInt(10)}.jpg');
+    final ref = FirebaseStorage.instance.ref().child('${Random().nextInt(7)}.jpg');
     // no need of the file extension, the name will do fine.
     var url = await ref.getDownloadURL();
   }
