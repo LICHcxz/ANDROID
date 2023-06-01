@@ -346,15 +346,15 @@ class Scene2 extends StatelessWidget {
                         margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 94*fem),
                         width: 197*fem,
                         height: 191*fem,
-                        child: Image.network(
-                          'url',
-                          width: 197*fem,
-                          height: 191*fem,
+                        child: Image.asset(
+                          'assets/page-1/images/p-fon-podarki-dlya-fotoshopa-32-1-6gu.png',
+                          // width: 197*fem,
+                          // height: 191*fem,
                         ),
                       ),
                       Container(
                         // a5K (35724799)
-                        margin: EdgeInsets.fromLTRB(35*fem, 0*fem, 35*fem, 11*fem),
+                        margin: EdgeInsets.fromLTRB(35*fem, 0*fem, 35*fem, 0*fem),
                         child: TextButton(
                           onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => Scene()));},
                           style: TextButton.styleFrom (
