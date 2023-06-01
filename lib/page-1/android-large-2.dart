@@ -3,7 +3,6 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 import 'dart:ui';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:myapp/utils.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -131,8 +130,7 @@ class Scene2 extends StatelessWidget {
                                                 child: Text(
                                                   'BACK',
                                                   textAlign: TextAlign.center,
-                                                  style: SafeGoogleFont (
-                                                    'Rakkas',
+                                                  style: TextStyle (
                                                     fontSize: 16*ffem,
                                                     fontWeight: FontWeight.w400,
                                                     height: 1.49*ffem/fem,
@@ -188,8 +186,7 @@ class Scene2 extends StatelessWidget {
                                                 child: Text(
                                                   'HOME',
                                                   textAlign: TextAlign.center,
-                                                  style: SafeGoogleFont (
-                                                    'Rakkas',
+                                                  style: TextStyle (
                                                     fontSize: 16*ffem,
                                                     fontWeight: FontWeight.w400,
                                                     height: 1.49*ffem/fem,
@@ -243,8 +240,7 @@ class Scene2 extends StatelessWidget {
                                               child: Text(
                                                 'MAP',
                                                 textAlign: TextAlign.center,
-                                                style: SafeGoogleFont (
-                                                  'Rakkas',
+                                                style: TextStyle (
                                                   fontSize: 16*ffem,
                                                   fontWeight: FontWeight.w400,
                                                   height: 1.49*ffem/fem,
@@ -289,8 +285,7 @@ class Scene2 extends StatelessWidget {
                         child: Text(
                           'HINT',
                           textAlign: TextAlign.center,
-                          style: SafeGoogleFont (
-                            'Rakkas',
+                          style: TextStyle (
                             fontSize: 32*ffem,
                             fontWeight: FontWeight.w400,
                             height: 1.49*ffem/fem,
@@ -307,8 +302,7 @@ class Scene2 extends StatelessWidget {
                         child: Text(
                           'YOUR PERSONAL TIPSTER',
                           textAlign: TextAlign.center,
-                          style: SafeGoogleFont (
-                            'Rakkas',
+                          style: TextStyle (
                             fontSize: 10*ffem,
                             fontWeight: FontWeight.w400,
                             height: 1.49*ffem/fem,
@@ -372,8 +366,7 @@ class Scene2 extends StatelessWidget {
                               child: Text(
                                 'OTHER',
                                 textAlign: TextAlign.center,
-                                style: SafeGoogleFont (
-                                  'Rakkas',
+                                style: TextStyle (
                                   fontSize: 16*ffem,
                                   fontWeight: FontWeight.w400,
                                   height: 1.49*ffem/fem,
@@ -404,8 +397,7 @@ class Scene2 extends StatelessWidget {
                               child: Text(
                                 'Where to buy',
                                 textAlign: TextAlign.center,
-                                style: SafeGoogleFont (
-                                  'Rakkas',
+                                style: TextStyle (
                                   fontSize: 16*ffem,
                                   fontWeight: FontWeight.w400,
                                   height: 1.49*ffem/fem,
@@ -435,8 +427,7 @@ class Scene2 extends StatelessWidget {
                               child: Text(
                                 'Fact about cats',
                                 textAlign: TextAlign.center,
-                                style: SafeGoogleFont (
-                                  'Rakkas',
+                                style: TextStyle (
                                   fontSize: 16*ffem,
                                   fontWeight: FontWeight.w400,
                                   height: 1.49*ffem/fem,

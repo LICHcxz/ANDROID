@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 import 'dart:ui';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:myapp/utils.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -109,8 +108,7 @@ class Scene extends StatelessWidget {
                               child: Text(
                                 'ABOUT US',
                                 textAlign: TextAlign.center,
-                                style: SafeGoogleFont (
-                                  'Rakkas',
+                                style: TextStyle (
                                   fontSize: 16*ffem,
                                   fontWeight: FontWeight.w400,
                                   height: 1.49*ffem/fem,
@@ -125,9 +123,8 @@ class Scene extends StatelessWidget {
                               ),
                               child: Text(
                                 'We are just as simple people as you and we all face difficulties choosing gifts for our loved ones. To solve this problem, we have come up with a program in which thousands of gift ideas are collected that will suit everyone. So come on, click faster and choose a gift...',
-                                style: SafeGoogleFont (
-                                  'Rakkas',
-                                  fontSize: 24*ffem,
+                                style: TextStyle (
+                                  fontSize: 20*ffem,
                                   fontWeight: FontWeight.w400,
                                   height: 1.49*ffem/fem,
                                   color: Color(0xff000000),
@@ -158,8 +155,7 @@ class Scene extends StatelessWidget {
                               child: Text(
                                 'CHOOSE A GIFT',
                                 textAlign: TextAlign.center,
-                                style: SafeGoogleFont (
-                                  'Rakkas',
+                                style: TextStyle (
                                   fontSize: 10*ffem,
                                   fontWeight: FontWeight.w400,
                                   height: 1.49*ffem/fem,
@@ -197,8 +193,7 @@ class Scene extends StatelessWidget {
                         child: Text(
                           'HINT',
                           textAlign: TextAlign.center,
-                          style: SafeGoogleFont (
-                            'Rakkas',
+                          style: TextStyle (
                             fontSize: 32*ffem,
                             fontWeight: FontWeight.w400,
                             height: 1.49*ffem/fem,
@@ -215,8 +210,7 @@ class Scene extends StatelessWidget {
                         child: Text(
                           'YOUR PERSONAL TIPSTER',
                           textAlign: TextAlign.center,
-                          style: SafeGoogleFont (
-                            'Rakkas',
+                          style: TextStyle (
                             fontSize: 10*ffem,
                             fontWeight: FontWeight.w400,
                             height: 1.49*ffem/fem,

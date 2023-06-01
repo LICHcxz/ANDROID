@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 import 'dart:ui';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:myapp/utils.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
@@ -109,8 +108,7 @@ class Scene3 extends StatelessWidget {
                                             child: Text(
                                               'HOME',
                                               textAlign: TextAlign.center,
-                                              style: SafeGoogleFont (
-                                                'Rakkas',
+                                              style: TextStyle (
                                                 fontSize: 16*ffem,
                                                 fontWeight: FontWeight.w400,
                                                 height: 1.49*ffem/fem,
@@ -215,8 +213,7 @@ class Scene3 extends StatelessWidget {
                         child: Text(
                           'HINT',
                           textAlign: TextAlign.center,
-                          style: SafeGoogleFont (
-                            'Rakkas',
+                          style: TextStyle (
                             fontSize: 32*ffem,
                             fontWeight: FontWeight.w400,
                             height: 1.49*ffem/fem,
@@ -233,8 +230,7 @@ class Scene3 extends StatelessWidget {
                         child: Text(
                           'YOUR PERSONAL TIPSTER',
                           textAlign: TextAlign.center,
-                          style: SafeGoogleFont (
-                            'Rakkas',
+                          style: TextStyle (
                             fontSize: 10*ffem,
                             fontWeight: FontWeight.w400,
                             height: 1.49*ffem/fem,
